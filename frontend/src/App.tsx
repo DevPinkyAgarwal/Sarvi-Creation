@@ -197,14 +197,14 @@ function App() {
         }}
       />
       <HelmetProvider>
-        <SmoothScroll>
-          <Router>
+        <Router>
+          <SmoothScroll>
             <SideCart />
             <LogoLoader />
             <ScrollToTop />
             <AnimatedRoutes />
-          </Router>
-        </SmoothScroll>
+          </SmoothScroll>
+        </Router>
       </HelmetProvider>
     </ErrorBoundary>
   );
