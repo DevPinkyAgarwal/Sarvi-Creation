@@ -170,7 +170,7 @@ export default function QuickViewModal({ product, isOpen, onClose }: QuickViewMo
                                         </div>
                                         
                                         <button 
-                                            onClick={() => toggleWishlist(product)}
+                                            onClick={() => toggleItem(product)}
                                             className={`p-3 rounded-lg border transition-all ${isInWishlist(product._id) ? 'bg-red-50 border-red-100 text-red-500' : 'bg-white border-gray-100 text-gray-400 hover:text-black hover:border-gray-200'}`}
                                         >
                                             <Heart className={`w-5 h-5 ${isInWishlist(product._id) ? 'fill-current' : ''}`} />
