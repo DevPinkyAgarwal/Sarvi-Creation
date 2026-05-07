@@ -70,10 +70,16 @@ sudo ufw enable
 
 ### 1. Clone the Repository
 ```bash
-cd /var/www
-sudo git clone <your-repo-url> sarvi
-sudo chown -R $USER:$USER /var/www/sarvi
-cd /var/www/sarvi
+cd ~
+git clone https://github.com/DevPinkyAgarwal/Sarvi-Creation.git SarviCreation
+cd ~/SarviCreation
+```
+
+### 2. Fix Permissions for Nginx
+Since the code is in the home directory, we must allow Nginx to access it:
+```bash
+sudo chmod +x ~
+sudo chmod -R 755 ~/SarviCreation
 ```
 
 ### 2. Backend Configuration
@@ -135,9 +141,9 @@ server {
     listen 80;
     server_name yourdomain.com www.yourdomain.com api.yourdomain.com;
 
-    # Frontend
+    # Frontend (Update path to match your home directory)
     location / {
-        root /var/www/sarvi/frontend/dist;
+        root /root/SarviCreation/frontend/dist;
         index index.html;
         try_files $uri $uri/ /index.html;
     }
@@ -188,7 +194,7 @@ Follow the prompts to enable redirection to HTTPS.
 ## Troubleshooting & Logs
 
 - **Backend Logs**: `pm2 logs sarvi-backend`
-- **Nginx Error Logs**: `sudo tail -f /var/var/log/nginx/error.log`
+- **Nginx Error Logs**: `sudo tail -f /var/log/nginx/error.log`
 - **Health Check**: Visit `https://api.yourdomain.com/api/health`
 
 ---
