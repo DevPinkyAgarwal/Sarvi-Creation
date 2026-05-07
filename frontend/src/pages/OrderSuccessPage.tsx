@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Sparkles, CheckCircle2, Package, ArrowRight, ShoppingBag, MapPin, Truck } from 'lucide-react';
+import { Sparkles, CheckCircle2, ArrowRight, MapPin, Truck } from 'lucide-react';
 import api from '../lib/api';
 import { motion } from 'framer-motion';
 import { optimizeImage } from '../utils/image';
@@ -8,7 +8,7 @@ import { optimizeImage } from '../utils/image';
 export default function OrderSuccessPage() {
     const { id } = useParams();
     const [order, setOrder] = useState<any>(null);
-    const [loading, setLoading] = useState(true);
+    const [, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchOrder = async () => {

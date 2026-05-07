@@ -4,7 +4,7 @@ import { useCartStore } from '../store/cartStore';
 import { useAuthStore } from '../store/authStore';
 import api from '../lib/api';
 import { toast } from 'sonner';
-import { ShieldCheck, ArrowRight, ChevronLeft, Lock, Truck, BadgeCheck } from 'lucide-react';
+import { ShieldCheck, ArrowRight, ChevronLeft, Lock, BadgeCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const loadRazorpay = (): Promise<boolean> => {

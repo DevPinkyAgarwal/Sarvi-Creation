@@ -87,8 +87,23 @@ sudo chmod -R 755 ~/SarviCreation
 cd backend
 npm install
 cp .env.example .env
-nano .env # Edit with your production credentials
+nano .env # Paste production credentials (see below)
 npm run build
+```
+
+**Backend .env Template:**
+```env
+PORT=5151
+NODE_ENV=production
+MONGO_URI=mongodb://localhost:27017/sarvi-creation
+JWT_SECRET=your_random_string
+FRONTEND_URL=https://sarvicreation.com
+ADMIN_URL=https://sarvicreation.com
+CLOUDINARY_CLOUD_NAME=xxx
+CLOUDINARY_API_KEY=xxx
+CLOUDINARY_API_SECRET=xxx
+RAZORPAY_KEY_ID=rzp_live_xxx
+RAZORPAY_KEY_SECRET=xxx
 ```
 
 ### 3. Frontend Configuration
@@ -96,8 +111,14 @@ npm run build
 cd ../frontend
 npm install
 cp .env.example .env
-nano .env # Set VITE_API_URL to https://api.yourdomain.com/api
+nano .env # Update API URL (see below)
 npm run build
+```
+
+**Frontend .env Template:**
+```env
+VITE_API_URL=https://sarvicreation.com/api
+VITE_RAZORPAY_KEY_ID=rzp_live_xxx
 ```
 
 ---
@@ -113,7 +134,7 @@ sudo npm install -g pm2
 
 ### 2. Start Backend
 ```bash
-cd /var/www/sarvi/backend
+cd ~/SarviCreation/backend
 pm2 start ecosystem.config.js --env production
 ```
 
@@ -139,7 +160,7 @@ sudo nano /etc/nginx/sites-available/sarvi
 ```nginx
 server {
     listen 80;
-    server_name yourdomain.com www.yourdomain.com api.yourdomain.com;
+    server_name sarvicreation.com www.sarvicreation.com api.sarvicreation.com;
 
     # Frontend (Update path to match your home directory)
     location / {

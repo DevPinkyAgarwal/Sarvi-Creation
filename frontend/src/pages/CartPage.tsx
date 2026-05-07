@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useCartStore } from '../store/cartStore';
-import { Trash2, Plus, Minus, ShoppingBag, ArrowRight, ShieldCheck, Heart } from 'lucide-react';
+import { Trash2, Plus, Minus, ShoppingBag, ArrowRight, ShieldCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { optimizeImage } from '../utils/image';
 import MetaTags from '../components/MetaTags';

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import api from '../lib/api';
-import { Mail, Lock, User, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Mail, Lock, User, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 
 const sanitizeInput = (val: string) => val.replace(/[<>]/g, '').trim();

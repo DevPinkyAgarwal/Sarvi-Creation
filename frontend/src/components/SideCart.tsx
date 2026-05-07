@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShoppingBag, Trash2, ArrowRight, Minus, Plus, ShieldCheck } from 'lucide-react';
 import { useCartStore } from '../store/cartStore';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { optimizeImage } from '../utils/image';
 
 export default function SideCart() {

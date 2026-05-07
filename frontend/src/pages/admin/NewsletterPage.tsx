@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Mail, Search, Download, Trash2, UserCheck, Calendar } from 'lucide-react';
 import api from '../../lib/api';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 
 interface Subscriber {

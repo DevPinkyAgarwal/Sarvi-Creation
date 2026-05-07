@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 import api from '../lib/api';
 import ProductCard from '../components/ProductCard';
-import { Filter, SlidersHorizontal, X } from 'lucide-react';
+import { Filter, SlidersHorizontal } from 'lucide-react';
 import { ProductCardSkeleton } from '../components/SkeletonLoader';
 import MetaTags from '../components/MetaTags';
 import { motion, AnimatePresence } from 'framer-motion';

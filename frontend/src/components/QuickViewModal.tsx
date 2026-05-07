@@ -20,7 +20,7 @@ export default function QuickViewModal({ product, isOpen, onClose }: QuickViewMo
     const [addedToCart, setAddedToCart] = useState(false);
     
     const addItem = useCartStore(state => state.addItem);
-    const { toggleWishlist, isInWishlist } = useWishlistStore();
+    const { toggleItem, isInWishlist } = useWishlistStore();
 
     useEffect(() => {
         if (product && product.variants?.length > 0) {

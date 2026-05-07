@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAuthStore } from '../store/authStore';
 import api from '../lib/api';
-import { User, Package, MapPin, LogOut, ChevronRight, Clock, CheckCircle2, Truck, XCircle, ShieldCheck, Mail, Phone, ArrowRight } from 'lucide-react';
+import { User, Package, MapPin, LogOut, ChevronRight, Clock, CheckCircle2, Truck, XCircle, Mail, Phone, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'sonner';
 
