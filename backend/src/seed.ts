@@ -82,7 +82,7 @@ const seed = async () => {
                 slug: slugify(cat.name, { lower: true }),
                 description: cat.description,
                 section: cat.section,
-                image: { public_id: `seed_${cat.name}`, url: cat.image },
+                image: { public_id: `seed_${cat.name}`, url: cat.image.url },
                 isActive: true
             });
             console.log(`Created Category: ${cat.name}`);
@@ -99,7 +99,7 @@ const seed = async () => {
                 description: prod.description,
                 basePrice: prod.basePrice,
                 categories: categoryIds,
-                images: prod.images.map(url => ({ public_id: `seed_${prod.name}`, url, isPrimary: true })),
+                images: prod.images.map(img => ({ public_id: `seed_${prod.name}`, url: img.url, isPrimary: true })),
                 isActive: true,
                 variants: [{
                     sku: `SKU-${Math.floor(Math.random() * 100000)}`,
