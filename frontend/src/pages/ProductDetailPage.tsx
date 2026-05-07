@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import api from '../lib/api';
 import { useCartStore } from '../store/cartStore';
 import { useWishlistStore } from '../store/wishlistStore';
-import { Star, ShieldCheck, Truck, RefreshCcw, ShoppingBag, Heart, Plus, Minus, ChevronRight, Check } from 'lucide-react';
+import { Star, ShieldCheck, Truck, ShoppingBag, Heart, Plus, Minus, ChevronRight, Check } from 'lucide-react';
 import RelatedProducts from '../components/RelatedProducts';
 import ProductReviews from '../components/ProductReviews';
 import MetaTags from '../components/MetaTags';
