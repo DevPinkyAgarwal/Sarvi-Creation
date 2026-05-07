@@ -205,7 +205,7 @@ Secure your site with HTTPS.
 
 ```bash
 sudo apt install -y certbot python3-certbot-nginx
-sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com -d api.yourdomain.com
+sudo certbot --nginx -d sarvicreation.com -d www.sarvicreation.com -d api.sarvicreation.com
 ```
 
 Follow the prompts to enable redirection to HTTPS.
@@ -216,7 +216,7 @@ Follow the prompts to enable redirection to HTTPS.
 
 - **Backend Logs**: `pm2 logs sarvi-backend`
 - **Nginx Error Logs**: `sudo tail -f /var/log/nginx/error.log`
-- **Health Check**: Visit `https://api.yourdomain.com/api/health`
+- **Health Check**: Visit `https://sarvicreation.com/api/health`
 
 ---
 
