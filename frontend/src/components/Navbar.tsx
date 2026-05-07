@@ -165,7 +165,9 @@ export default function Navbar() {
         { name: 'Outlet', to: '/category/outlet' },
     ];
 
-    const navLinks = dynamicNavLinks.length > 0 ? dynamicNavLinks : staticNavLinks;
+    // Limit to 5 max, then show "More"
+    const displayLinks = dynamicNavLinks.length > 5 ? dynamicNavLinks.slice(0, 5) : (dynamicNavLinks.length > 0 ? dynamicNavLinks : staticNavLinks.slice(0, 5));
+    const overflowLinks = dynamicNavLinks.length > 5 ? dynamicNavLinks.slice(5) : [];
 
     return (
         <div className="font-sans">
@@ -209,7 +211,7 @@ export default function Navbar() {
 
                             {/* Desktop Main Links - Centered */}
                             <div className="hidden xl:flex flex-1 h-full justify-center items-center gap-8 2xl:gap-12">
-                                {navLinks.map((link, idx) => (
+                                {displayLinks.map((link, idx) => (
                                     <NavLink
                                         key={link.name}
                                         to={link.to}
@@ -218,6 +220,26 @@ export default function Navbar() {
                                         {link.name}
                                     </NavLink>
                                 ))}
+
+                                {overflowLinks.length > 0 && (
+                                    <div className="h-full flex items-center relative group/more">
+                                        <button className="text-[13px] font-medium transition-all whitespace-nowrap relative py-2 tracking-[0.15em] uppercase font-sans text-[#1a1a1a] flex items-center gap-1.5 hover:text-black">
+                                            More <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover/more:rotate-180" />
+                                        </button>
+                                        
+                                        <div className="absolute top-full left-1/2 -translate-x-1/2 w-56 bg-white shadow-2xl border border-gray-100 py-4 transition-all duration-300 opacity-0 invisible group-hover/more:opacity-100 group-hover/more:visible translate-y-2 group-hover/more:translate-y-0">
+                                            {overflowLinks.map(link => (
+                                                <Link 
+                                                    key={link.name} 
+                                                    to={link.to}
+                                                    className="block px-6 py-3 text-[11px] uppercase tracking-widest text-gray-600 hover:text-black hover:bg-gray-50 transition-all"
+                                                >
+                                                    {link.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Icons - Absolute Right */}
