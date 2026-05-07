@@ -8,17 +8,17 @@ import { Category } from './models/Category.model';
 dotenv.config();
 
 const categoriesData = [
-    { name: 'Rings', section: 'category', description: 'Exceptional diamond and gemstone rings.', image: { url: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1200' } },
+    { name: 'Rings', section: 'category', description: 'Exceptional diamond and gemstone rings.', image: { url: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200' } },
     { name: 'Necklaces', section: 'category', description: 'Statement pieces for timeless elegance.', image: { url: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200' } },
     { name: 'Earrings', section: 'category', description: 'Luminous accents for every silhouette.', image: { url: 'https://images.unsplash.com/photo-1630019051933-e746f8cea245?q=80&w=1200' } },
     { name: 'Bracelets', section: 'category', description: 'Finely crafted wristwear in solid gold.', image: { url: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1200' } },
     { name: 'Bangles', section: 'category', description: 'Iconic heritage craftsmanship.', image: { url: 'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?q=80&w=1200' } },
     
-    { name: 'The Diamond Suite', section: 'collection', description: 'Unrivaled brilliance in every cut.', image: { url: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200' } },
+    { name: 'The Diamond Suite', section: 'collection', description: 'Unrivaled brilliance in every cut.', image: { url: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1200' } },
     { name: 'Bridal Heritage', section: 'collection', description: 'Heirloom pieces for your eternal legacy.', image: { url: 'https://images.unsplash.com/photo-1549439602-43ebca2327af?q=80&w=1200' } },
     { name: 'Signature Gold', section: 'collection', description: 'Minimalist luxury for the daily muse.', image: { url: 'https://images.unsplash.com/photo-1615484477778-ca3b77940c25?q=80&w=1200' } },
     
-    { name: '18K Yellow Gold', section: 'material', description: 'The golden standard of luxury.', image: { url: 'https://images.unsplash.com/photo-1615484477778-ca3b77940c25?q=80&w=1200' } },
+    { name: '18K Yellow Gold', section: 'material', description: 'The golden standard of luxury.', image: { url: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1200' } },
     { name: 'Platinum', section: 'material', description: 'Rare, pure, and eternally enduring.', image: { url: 'https://images.unsplash.com/photo-1635767798638-3e25273a8236?q=80&w=1200' } },
     
     { name: 'New Arrivals', section: 'discover', description: 'The latest curations from our atelier.', image: { url: 'https://images.unsplash.com/photo-1512163143273-bde0e3cc7407?q=80&w=1200' } },
