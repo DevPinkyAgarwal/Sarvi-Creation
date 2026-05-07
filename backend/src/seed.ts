@@ -5,7 +5,7 @@ import slugify from 'slugify';
 import { Product } from './models/Product.model';
 import { Category } from './models/Category.model';
 
-dotenv.config({ path: path.join(__dirname, '../.env') });
+dotenv.config();
 
 const categoriesData = [
     // SECTIONS: category, collection, material, discover
