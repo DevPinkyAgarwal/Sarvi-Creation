@@ -321,19 +321,11 @@ export default function ProductDetailPage() {
                             </div>
                         </div>
 
-                        <div className="group flex text-left gap-4 p-4 border border-gray-100 hover:border-gray-200 hover:bg-gray-50/50 transition-colors">
-                            <RefreshCcw className="w-5 h-5 text-gray-400 stroke-[1.5] group-hover:text-black transition-colors" />
-                            <div>
-                                <h4 className="text-xs uppercase tracking-widest font-bold text-gray-900 mb-1">14-Day Returns</h4>
-                                <p className="text-[13px] text-gray-500">Enjoy complimentary returns or exchanges globally.</p>
-                            </div>
-                        </div>
-
                         <div className="group flex text-left gap-4 p-4 border border-gray-100 hover:border-gray-200 hover:bg-[#F8F8F8] transition-colors">
                             <ShieldCheck className="w-5 h-5 text-gray-400 stroke-[1.5] group-hover:text-black transition-colors" />
                             <div>
-                                <h4 className="text-xs uppercase tracking-widest font-bold text-gray-900 mb-1">Lifetime Warranty</h4>
-                                <p className="text-[13px] text-gray-500">All pieces feature certified authenticity and hallmark guarantees.</p>
+                                <h4 className="text-xs uppercase tracking-widest font-bold text-gray-900 mb-1">Certified Hallmarked</h4>
+                                <p className="text-[13px] text-gray-500">All the jewellery is hallmarked and 100% matches the description.</p>
                             </div>
                         </div>
                     </div>
