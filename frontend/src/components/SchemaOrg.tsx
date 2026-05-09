@@ -19,7 +19,7 @@ export default function SchemaOrg({ type, data }: SchemaOrgProps) {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-XXXXXXXXXX",
+      "telephone": "+91-7080803366",
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": "en"
@@ -65,12 +65,13 @@ export default function SchemaOrg({ type, data }: SchemaOrgProps) {
           "@type": "JewelryStore",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "46/122, Ar Rashidiyyah, Badshahi Naka, General Ganj",
-            "addressLocality": "Kanpur",
-            "addressRegion": "UP",
-            "postalCode": "208001",
+            "streetAddress": "4301, 1st Floor, KGB ka Rasta, 1st Crossing, Johari Bazar",
+            "addressLocality": "Jaipur",
+            "addressRegion": "Rajasthan",
+            "postalCode": "302003",
             "addressCountry": "IN"
           },
+          "telephone": "+91-7080803366",
           "priceRange": "₹₹₹"
         };
       case 'BreadcrumbList':

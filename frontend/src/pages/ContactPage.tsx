@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Send, CheckCircle2, MapPin, Phone } from 'lucide-react';
 import api from '../lib/api';
 import MetaTags from '../components/MetaTags';
 import { toast } from 'sonner';
@@ -77,6 +77,29 @@ export default function ContactPage() {
                                     <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Email Us</h3>
                                     <p className="text-[13px] text-gray-900 font-medium">care@sarvicreation.com</p>
                                     <p className="text-[13px] text-gray-500 font-light">Available 24/7 for inquiries.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-6 group">
+                                <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-900 group-hover:bg-black group-hover:text-white transition-all duration-500">
+                                    <MapPin className="w-5 h-5" />
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Visit Us</h3>
+                                    <p className="text-[13px] text-gray-900 font-medium leading-relaxed max-w-[200px]">
+                                        4301, 1st Floor, KGB ka Rasta, 1st Crossing, Johari Bazar, Jaipur, Rajasthan - 302003
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-6 group">
+                                <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-900 group-hover:bg-black group-hover:text-white transition-all duration-500">
+                                    <Phone className="w-5 h-5" />
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Call Us</h3>
+                                    <a href="tel:+917080803366" className="text-[13px] text-gray-900 font-medium hover:text-gray-500 transition-colors">+91 7080803366</a>
+                                    <p className="text-[13px] text-gray-500 font-light">Mon-Sat: 10:00 AM - 7:00 PM</p>
                                 </div>
                             </div>
                         </div>

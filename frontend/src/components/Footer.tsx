@@ -145,7 +145,9 @@ export default function Footer() {
                                 </div>
                                 <div className="flex flex-col space-y-1">
                                     <span className="text-gray-900 text-sm font-medium">Flagship Store</span>
-                                    <span className="text-sm font-light text-gray-500 leading-relaxed">Location coming soon...</span>
+                                    <span className="text-sm font-light text-gray-500 leading-relaxed max-w-[200px]">
+                                        4301, 1st Floor, KGB ka Rasta, 1st Crossing, Johari Bazar, Jaipur, Rajasthan - 302003
+                                    </span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4 group">
@@ -154,7 +156,7 @@ export default function Footer() {
                                 </div>
                                 <div className="flex flex-col space-y-1">
                                     <span className="text-gray-900 text-sm font-medium">Concierge</span>
-                                    <span className="text-sm font-light text-gray-500">Contact details coming soon...</span>
+                                    <a href="tel:+917080803366" className="text-sm font-light text-gray-500 hover:text-gray-900 transition-colors">+91 7080803366</a>
                                 </div>
                             </li>
                             <li className="group cursor-pointer">
