@@ -60,7 +60,7 @@ export default function LogoLoader() {
             transition={{ delay: 0.5, duration: 1 }}
             className="mt-6 text-[10px] tracking-[0.3em] uppercase text-slate-400 font-medium"
           >
-            Refining Elegance
+            Defining Elegance
           </motion.p>
         </motion.div>
       )}

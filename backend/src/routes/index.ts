@@ -10,10 +10,12 @@ import announcementRoutes from './announcement.routes';
 import newsletterRoutes from './newsletter.routes';
 import paymentRoutes from './payment.routes';
 import contactRoutes from './contact.routes';
+import seoRoutes from './seo.routes';
 
 const router = Router();
 
 // Route Integrations
+router.use('/seo', seoRoutes);
 router.use('/users', userRoutes);
 router.use('/products', productRoutes);
 router.use('/categories', categoryRoutes);

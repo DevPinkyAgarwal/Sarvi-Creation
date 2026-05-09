@@ -61,7 +61,7 @@ export default function ProductsPage() {
                         className={`group flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${showFilters ? 'text-[#D4AF37]' : 'text-gray-900'}`}
                     >
                         <Filter className={`w-3.5 h-3.5 transition-transform duration-500 ${showFilters ? 'rotate-180' : ''}`} />
-                        {showFilters ? 'Hide Filters' : 'Refine Selection'}
+                        {showFilters ? 'Hide Filters' : 'Filter Selection'}
                     </button>
                     <div className="h-4 w-px bg-gray-200 hidden md:block"></div>
                     <span className="text-[10px] font-medium text-gray-400 uppercase tracking-widest">

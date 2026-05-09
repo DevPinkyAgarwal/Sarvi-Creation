@@ -14,9 +14,10 @@ export default function MetaTags({
   description = 'Experience the epitome of quiet luxury with Sarvi Creation. Explore our curated collection of fine jewelry and premium accessories.',
   keywords = 'jewelry, luxury, accessories, fine jewelry, diamonds, sarvi creation',
   image = 'https://res.cloudinary.com/dvz9v6p3p/image/upload/v1/sarvi/logo-meta.png', // Fallback meta image
+  noindex = false,
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = 'website'
-}: MetaTagsProps) {
+}: MetaTagsProps & { noindex?: boolean }) {
   const siteTitle = title.includes('Sarvi Creation') ? title : `${title} | Sarvi Creation`;
 
   return (
@@ -26,6 +27,12 @@ export default function MetaTags({
       <meta name="title" content={siteTitle} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+
+      {/* Canonical Link */}
+      {url && <link rel="canonical" href={url} />}
+
+      {/* Indexing Control */}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />

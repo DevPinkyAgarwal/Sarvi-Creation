@@ -7,6 +7,7 @@ import { Star, ShieldCheck, Truck, ShoppingBag, Heart, Plus, Minus, ChevronRight
 import RelatedProducts from '../components/RelatedProducts';
 import ProductReviews from '../components/ProductReviews';
 import MetaTags from '../components/MetaTags';
+import SchemaOrg from '../components/SchemaOrg';
 import { optimizeImage } from '../utils/image';
 import { ProductDetailSkeleton } from '../components/SkeletonLoader';
 
@@ -90,6 +91,29 @@ export default function ProductDetailPage() {
                 description={product.description?.substring(0, 160)}
                 image={product.images[0]?.url}
                 type="product"
+            />
+            
+            {/* Structured Data */}
+            <SchemaOrg 
+                type="Product" 
+                data={{
+                    ...product,
+                    sku: selectedVariant?.sku || product.variants[0]?.sku,
+                    stockQuantity: selectedVariant?.stockQuantity || product.variants[0]?.stockQuantity
+                }} 
+            />
+            <SchemaOrg 
+                type="BreadcrumbList" 
+                data={{
+                    items: [
+                        { name: 'Home', url: 'https://sarvicreation.com/' },
+                        { 
+                            name: product.categories?.[0]?.name || 'Collection', 
+                            url: `https://sarvicreation.com/category/${product.categories?.[0]?.slug || 'trending-now'}` 
+                        },
+                        { name: product.name, url: window.location.href }
+                    ]
+                }} 
             />
             {/* Breadcrumbs */}
             <div className="flex items-center gap-2 text-[10px] font-medium tracking-[0.2em] text-gray-400 uppercase mb-8 lg:mb-12">
