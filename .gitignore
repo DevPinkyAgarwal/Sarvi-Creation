@@ -40,3 +40,7 @@ frontend/.next/
 # Temporary files
 tmp/
 temp/
+
+# Deployment Scripts (contains credentials)
+deploy.sh
+vps_deploy.bat
