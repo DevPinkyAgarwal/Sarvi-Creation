@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { subscribe, getAllSubscribers, deleteSubscriber } from '../controllers/newsletter.controller';
-import { protect, admin } from '../middleware/auth.middleware';
+import { protect, admin } from '../middlewares/auth.middleware';
 
 const router = Router();
 

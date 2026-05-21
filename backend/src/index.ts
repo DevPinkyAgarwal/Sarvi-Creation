@@ -35,7 +35,7 @@ requiredEnvVars.forEach(envVar => {
 
 const app = express();
 const httpServer = createServer(app);
-const PORT = process.env.PORT || 5151;
+const PORT = process.env.PORT || 5003;
 
 // Performance & Security Middlewares
 app.use(compression());

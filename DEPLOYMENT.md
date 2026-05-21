@@ -93,7 +93,7 @@ npm run build
 
 **Backend .env Template:**
 ```env
-PORT=5151
+PORT=5003
 NODE_ENV=production
 MONGO_URI=mongodb://localhost:27017/sarvi-creation
 JWT_SECRET=your_random_string
@@ -171,7 +171,7 @@ server {
 
     # Backend API
     location /api {
-        proxy_pass http://localhost:5151;
+        proxy_pass http://localhost:5003;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -181,7 +181,7 @@ server {
 
     # Socket.io
     location /socket.io {
-        proxy_pass http://localhost:5151;
+        proxy_pass http://localhost:5003;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "Upgrade";

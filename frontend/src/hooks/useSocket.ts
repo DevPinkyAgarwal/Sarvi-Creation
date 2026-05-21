@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { io, Socket } from 'socket.io-client';
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5151';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5003';
 
 export const useSocket = (onStatsUpdate?: (data: any) => void) => {
     const socketRef = useRef<Socket | null>(null);

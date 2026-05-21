@@ -37,4 +37,4 @@ Use the provided batch/shell scripts to start both frontend and backend concurre
 - **Windows:** Run `start_dev.bat`
 - **Mac/Linux:** Run `./start_dev.sh`
 
-The frontend will be available at `http://localhost:5173` and the backend at `http://localhost:5151`.
+The frontend will be available at `http://localhost:5173` and the backend at `http://localhost:5003`.
