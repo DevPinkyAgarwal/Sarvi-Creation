@@ -70,16 +70,16 @@ sudo ufw enable
 
 ### 1. Clone the Repository
 ```bash
-cd ~
-git clone https://github.com/DevPinkyAgarwal/Sarvi-Creation.git SarviCreation
-cd ~/SarviCreation
+cd /var/www
+sudo git clone https://github.com/DevPinkyAgarwal/Sarvi-Creation.git
+sudo chown -R $USER:$USER /var/www/Sarvi-Creation
+cd /var/www/Sarvi-Creation
 ```
 
 ### 2. Fix Permissions for Nginx
-Since the code is in the home directory, we must allow Nginx to access it:
+Ensure Nginx can access the directory:
 ```bash
-sudo chmod +x ~
-sudo chmod -R 755 ~/SarviCreation
+sudo chmod -R 755 /var/www/Sarvi-Creation
 ```
 
 ### 2. Backend Configuration
@@ -134,7 +134,7 @@ sudo npm install -g pm2
 
 ### 2. Start Backend
 ```bash
-cd ~/SarviCreation/backend
+cd /var/www/Sarvi-Creation/backend
 pm2 start ecosystem.config.js --env production
 ```
 
@@ -162,9 +162,9 @@ server {
     listen 80;
     server_name sarvicreation.com www.sarvicreation.com api.sarvicreation.com;
 
-    # Frontend (Update path to match your home directory)
+    # Frontend (Update path to match your deployment directory)
     location / {
-        root /root/SarviCreation/frontend/dist;
+        root /var/www/Sarvi-Creation/frontend/dist;
         index index.html;
         try_files $uri $uri/ /index.html;
     }
